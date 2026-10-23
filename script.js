@@ -4,7 +4,7 @@
 /* ================= KONFIGURASI (ubah di sini) ================= */
 const CONFIG = {
   // WAJIB DIGANTI sebelum publikasi. Format internasional tanpa +, spasi, atau strip. Contoh bentuk: 628XXXXXXXXXX
-  whatsappNumber: '+628978359659',
+  whatsappNumber: '628978359659',
   defaultMessage: 'Halo Sky Pixel, saya ingin konsultasi gratis mengenai pembuatan website untuk UMKM saya.',
   // Kosongkan jika belum ada; akan disembunyikan otomatis.
   contact: { email: '', hours: '' },
