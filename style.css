@@ -187,3 +187,20 @@ dialog::backdrop{background:rgba(11,27,58,.6)}
 .reveal.pre{opacity:0;transform:translateY(18px)}
 .reveal.pre.in{opacity:1;transform:none;transition:opacity .6s ease,transform .6s ease}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition-duration:.01ms!important}.reveal.pre{opacity:1;transform:none}}
+
+
+/* Perbaikan outline biru pada perangkat mobile */
+@media (hover: none) and (pointer: coarse) {
+    :focus-visible {
+        outline: none;
+    }
+
+    button,
+    a,
+    input,
+    select,
+    textarea,
+    [role="button"] {
+        -webkit-tap-highlight-color: transparent;
+    }
+}
