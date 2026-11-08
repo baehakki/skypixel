@@ -10,36 +10,31 @@ const CONFIG = {
   contact: { email: '', hours: '' },
   // Harga contoh demonstrasi (Rupiah)
   siteTypes: {
-    landing: { label: 'Landing Page', price: 1500000 },
-    store: { label: 'Toko Online', price: 3500000 },
-    company: { label: 'Company Profile', price: 2500000 }
+    landing: { label: 'Landing Page', price: 150000 },
+    store: { label: 'Toko Online', price: 500000 },
+    company: { label: 'Company Profile', price: 250000 }
   },
   addons: {
     wa: { label: 'Integrasi WhatsApp Chat', price: 0 },
-    pay: { label: 'Payment Gateway', price: 750000 },
-    lang: { label: 'Multi-Bahasa', price: 500000 },
-    seo: { label: 'SEO Optimization', price: 600000 },
-    catalog: { label: 'Katalog Produk', price: 500000 }
+    pay: { label: 'Payment Gateway', price: 350000 },
+    lang: { label: 'Multi-Bahasa', price: 200000 },
+    seo: { label: 'SEO Optimization', price: 250000 },
+    catalog: { label: 'Katalog Produk', price: 200000 }
   },
   packages: [
-    { id: 'starter', name: 'Starter UMKM', price: 1500000, features: ['Landing page profesional', 'Desain responsif', 'Informasi bisnis dan layanan', 'Tombol WhatsApp', 'Formulir kontak sederhana', 'SEO dasar', 'SSL sesuai konfigurasi hosting', 'Domain dan hosting sesuai masa aktif paket'] },
-    { id: 'pro', name: 'UMKM Pro', price: 2900000, hot: true, features: ['Website multi-section', 'Desain premium', 'Galeri atau katalog produk', 'Integrasi WhatsApp', 'Optimasi SEO dasar', 'Formulir kontak', 'Panduan pengelolaan website', 'Dukungan revisi sesuai ketentuan paket'] },
+    { id: 'starter', name: 'Starter UMKM', price: 100000, features: ['Landing page profesional', 'Desain responsif', 'Informasi bisnis dan layanan', 'Tombol WhatsApp', 'Formulir kontak sederhana', 'SEO dasar', 'SSL sesuai konfigurasi hosting', 'Domain dan hosting sesuai masa aktif paket'] },
+    { id: 'pro', name: 'UMKM Pro', price: 150000, hot: true, features: ['Website multi-section', 'Desain premium', 'Galeri atau katalog produk', 'Integrasi WhatsApp', 'Optimasi SEO dasar', 'Formulir kontak', 'Panduan pengelolaan website', 'Dukungan revisi sesuai ketentuan paket'] },
     { id: 'custom', name: 'Enterprise / Custom', price: null, features: ['Struktur website sesuai kebutuhan bisnis', 'Fitur khusus sesuai ruang lingkup', 'Integrasi layanan pihak ketiga jika memungkinkan', 'Konsultasi kebutuhan teknis', 'Penawaran harga berdasarkan spesifikasi'] }
   ],
   // demo: isi URL demo asli jika ada. Jika null, tombol membuka modal preview konsep.
   portfolio: [
     { title: 'Kedai Kopi Senja', category: 'Kuliner', icon: 'fa-mug-hot', theme: 1, demo: null, desc: 'Menu, jam buka, lokasi, dan pesan via WhatsApp.', sections: ['Hero', 'Menu', 'Lokasi', 'Kontak'] },
-    { title: 'Butik Lokal Nusa', category: 'Fashion', icon: 'fa-shirt', theme: 2, demo: null, desc: 'Lookbook koleksi dengan katalog dan tombol pesan.', sections: ['Hero', 'Koleksi', 'Ukuran', 'Kontak'] },
-    { title: 'Konsultan Pajak Mandiri', category: 'Jasa', icon: 'fa-briefcase', theme: 3, demo: null, desc: 'Profil layanan profesional dengan formulir konsultasi.', sections: ['Hero', 'Layanan', 'Proses', 'Konsultasi'] },
-    { title: 'Warung Oleh-Oleh Daerah', category: 'Toko Online', icon: 'fa-basket-shopping', theme: 4, demo: null, desc: 'Toko produk lokal dengan keranjang dan pesanan WhatsApp.', sections: ['Hero', 'Produk', 'Cara Pesan', 'Kontak'] },
-    { title: 'Katalog Kue Rumahan', category: 'Kuliner', icon: 'fa-cake-candles', theme: 5, demo: null, desc: 'Katalog makanan lengkap dengan daftar harga.', sections: ['Hero', 'Katalog', 'Harga', 'Pesan'] },
-    { title: 'Brand Kriya Bumi', category: 'Toko Online', icon: 'fa-leaf', theme: 6, demo: null, desc: 'Website brand UMKM dengan cerita produk dan galeri.', sections: ['Hero', 'Cerita', 'Galeri', 'Pesan'] }
+   
   ],
   // CONTOH — ganti dengan ulasan pelanggan asli
   testimonials: [
-    { name: 'Nama Pemilik Bisnis', biz: 'Nama Bisnis', cat: 'Kuliner', quote: 'Tempat untuk kutipan ulasan pelanggan asli.' },
-    { name: 'Nama Pemilik Bisnis', biz: 'Nama Bisnis', cat: 'Fashion', quote: 'Tempat untuk kutipan ulasan pelanggan asli.' },
-    { name: 'Nama Pemilik Bisnis', biz: 'Nama Bisnis', cat: 'Jasa', quote: 'Tempat untuk kutipan ulasan pelanggan asli.' }
+    { name: 'Rusdi', biz: 'Mie Ayam', cat: 'Kuliner', quote: 'Websitenya mantap, jadi lebih mudah di lihat oleh orang banyak.' },
+   
   ],
   // Sesuaikan dengan kebijakan bisnis Anda
   policyNote: 'Biaya domain, hosting, perpanjangan, lisensi, payment gateway, revisi, dan pemeliharaan mengikuti kebijakan Sky Pixel dan dikonfirmasi sebelum proyek dimulai.'
@@ -225,7 +220,7 @@ modal && modal.addEventListener('click', e => { if (e.target === modal) modal.cl
 /* ================= Testimoni (placeholder) ================= */
 const testi = $('#testi');
 testi && CONFIG.testimonials.forEach(t => testi.append(h('article', { class: 'card testi reveal' },
-  h('span', { class: 'ph', text: 'Contoh Testimoni — Ganti dengan Ulasan Pelanggan Asli' }),
+  h('span', { class: 'ph', text: '' }),
   h('div', { class: 'stars', role: 'img', 'aria-label': 'Contoh penilaian bintang' }, ...Array.from({ length: 5 }, () => h('i', { class: 'fa-solid fa-star', 'aria-hidden': 'true' }))),
   h('p', { text: t.quote }),
   h('div', { class: 'who' }, h('span', { class: 'av', 'aria-hidden': 'true', text: t.name[0] }), h('div', {}, h('b', { text: t.name }), h('small', { text: `${t.biz} · ${t.cat}` }))))));
